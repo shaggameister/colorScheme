@@ -1,10 +1,10 @@
 const colorSelector = document.getElementById("color-selector");
 const getColor = document.getElementById("get-color");
-const schemes = document.getElementById("schemes");
+const schemeMode = document.getElementById("scheme-mode");
 
 getColor.addEventListener("click", () => {
   const colorHex = colorSelector.value.slice(1);
-  const modeScheme = schemes.value.toLowerCase();
+  const modeScheme = schemeMode.value.toLowerCase();
 
   fetch(
     `https://www.thecolorapi.com/scheme?hex=${colorHex}&mode=${modeScheme}&count=5`
